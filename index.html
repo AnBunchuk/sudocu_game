@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bunchuk_HW_26_2</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <main>
+        <section class="header">
+            <form>
+                <div class="name_game">++СУДОКУ++</div>
+                <h4 class="name_user">Игрок: </h4>
+                <input class="user" type="text" list="name_user">
+                <datalist id="name_user">
+                    <option value="user1">
+                </datalist>
+                <h4 class="level_user">Уровень: </h4>
+                <input class="level" type="text" list="level_user">
+                <datalist id="level_user">
+                    <option value="level 1">
+                    <option value="level 2">
+                    <option value="level 3">
+                </datalist>
+                <!-- <div > -->
+                <h4 class="result">Шалость удалась! Продолжаем?</h4>
+                <!-- </div> -->
+                <!--input? лучше <button></button> -->
+            </form>
+        </section>
+        <section class="stocks">
+            <ul class="ul_stock">
+               <!-- <li class="stock" value="1"><img src="./sticker/bukashka.jpg" alt=" "></li> -->
+
+            </ul>
+        </section>
+        <section class="playing_fields">
+            <ul class="ul_field">
+                <!-- <li class="field" value="1"></li> -->
+
+            </ul>
+        </section>
+    </main>
+
+    <script src="./script.js"></script>
+    <script>
+        const level_1 = {
+            level:1,
+            sticks: ['avto.jpg', 'el.jpg', 'bukashka.jpg', 'san.jpg'],
+            fontGame: './fon/6.jpg',
+            stocks: '4',
+            positionStick: [1, 3, 5, 6],
+        }
+        const mySudocu = new Sudocu(level_1);
+        mySudocu.init()
+    </script>
+
+</body>
+
+</html>
